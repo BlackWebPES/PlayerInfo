@@ -1,4 +1,5 @@
 <?php
+
 namespace Matthww\PlayerInfo\Tasks;
 
 use pocketmine\scheduler\Task;

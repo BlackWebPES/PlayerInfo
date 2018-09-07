@@ -91,7 +91,7 @@ class PlayerInfo extends PluginBase implements Listener {
                     if(isset($args[0])) {
                         $target = $this->getServer()->getPlayer($args[0]);
                     } else {
-                        $sender->sendMessage(TF::RED . "[PlayerInfo] Please specify a player");
+                        $sender->sendMessage(TF::RED . "[PlayerInfo] please specify a player");
                         return false;
                     }
                 } else {
@@ -105,14 +105,14 @@ class PlayerInfo extends PluginBase implements Listener {
                                 $this->getScheduler()->scheduleTask(new Tasks\LoadTask($this, $sender, $args[0]));
                                 return true;
                             } else {
-                                $sender->sendMessage(TF::RED . "[PlayerInfo] Player is not online");
+                                $sender->sendMessage(TF::RED . "[PlayerInfo] player is not online");
                                 return false;
                             }
                         }
                     }
                 }
             } else {
-                $sender->sendMessage(TF::RED . "[PlayerInfo] No permission");
+                $sender->sendMessage(TF::RED . "[PlayerInfo] no permission");
                 return false;
             }
             if($target instanceof Player) {
@@ -151,7 +151,7 @@ class PlayerInfo extends PluginBase implements Listener {
                 $sender->sendMessage(TF::GREEN . TF::BOLD . "================");
                 return true;
             } else {
-                $sender->sendMessage(TF::RED . "[PlayerInfo] Player is not online");
+                $sender->sendMessage(TF::RED . "[PlayerInfo] player is not online");
                 return false;
             }
         }

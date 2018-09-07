@@ -7,7 +7,7 @@ main: Matthww\PlayerInfo\PlayerInfo
 
 commands:
  playerinfo:
-  description: Show info about a certain player!
+  description: show info about a certain player
   usage: "/playerinfo <player>"
   permission: playerinfo.use
   aliases: ['pinfo']
@@ -17,4 +17,4 @@ permissions:
     children:
       playerinfo.use:
         default: op
-        description: "Allows the user to run the playerinfo command"
+        description: ""

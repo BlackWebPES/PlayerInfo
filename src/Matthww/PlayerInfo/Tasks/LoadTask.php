@@ -1,4 +1,5 @@
 <?php
+
 namespace Matthww\PlayerInfo\Tasks;
 
 use pocketmine\command\CommandSender;
@@ -25,7 +26,7 @@ class LoadTask extends Task {
 
     public function onRun(int $tick) {
         if(!file_exists($this->getPlugin()->getDataFolder() . "players/" . strtolower($this->target) . ".json")) {
-            $this->sender->sendMessage(TF::colorize("&c[PlayerInfo] Player &f". $this->target . " &cwas not found!"));
+            $this->sender->sendMessage(TF::colorize("&c[PlayerInfo] player &f". $this->target . " &cwas not found"));
         } else {
             $data = new Config($this->getPlugin()->getDataFolder() . "players/" . strtolower($this->target) . ".json", Config::JSON);
             $this->sender->sendMessage(TF::colorize("&a&l=== &r&aPlayerInfo &a&l==="));
